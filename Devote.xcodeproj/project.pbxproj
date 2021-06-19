@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F270C912267E5ADE003B73F8 /* HIdeKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F270C911267E5ADE003B73F8 /* HIdeKeyboardExtension.swift */; };
 		F2EEAFDF267BCEF6009C2048 /* DevoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EEAFDE267BCEF6009C2048 /* DevoteApp.swift */; };
 		F2EEAFE1267BCEF6009C2048 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EEAFE0267BCEF6009C2048 /* ContentView.swift */; };
 		F2EEAFE3267BCF09009C2048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2EEAFE2267BCF09009C2048 /* Assets.xcassets */; };
 		F2EEAFE6267BCF09009C2048 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2EEAFE5267BCF09009C2048 /* Preview Assets.xcassets */; };
 		F2EEAFE8267BCF09009C2048 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EEAFE7267BCF09009C2048 /* Persistence.swift */; };
 		F2EEAFEB267BCF09009C2048 /* Devote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2EEAFE9267BCF09009C2048 /* Devote.xcdatamodeld */; };
+		F2EEAFF6267BD019009C2048 /* sound-tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F2EEAFF3267BD019009C2048 /* sound-tap.mp3 */; };
+		F2EEAFF7267BD019009C2048 /* sound-ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F2EEAFF4267BD019009C2048 /* sound-ding.mp3 */; };
+		F2EEAFF8267BD019009C2048 /* sound-rise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F2EEAFF5267BD019009C2048 /* sound-rise.mp3 */; };
+		F2EEB004267C2E43009C2048 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EEB003267C2E43009C2048 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F270C911267E5ADE003B73F8 /* HIdeKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIdeKeyboardExtension.swift; sourceTree = "<group>"; };
 		F2EEAFDB267BCEF6009C2048 /* Devote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Devote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2EEAFDE267BCEF6009C2048 /* DevoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevoteApp.swift; sourceTree = "<group>"; };
 		F2EEAFE0267BCEF6009C2048 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,6 +30,10 @@
 		F2EEAFE7267BCF09009C2048 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		F2EEAFEA267BCF09009C2048 /* Devote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Devote.xcdatamodel; sourceTree = "<group>"; };
 		F2EEAFEC267BCF09009C2048 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2EEAFF3267BD019009C2048 /* sound-tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-tap.mp3"; sourceTree = "<group>"; };
+		F2EEAFF4267BD019009C2048 /* sound-ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-ding.mp3"; sourceTree = "<group>"; };
+		F2EEAFF5267BD019009C2048 /* sound-rise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-rise.mp3"; sourceTree = "<group>"; };
+		F2EEB003267C2E43009C2048 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +67,14 @@
 			isa = PBXGroup;
 			children = (
 				F2EEAFDE267BCEF6009C2048 /* DevoteApp.swift */,
-				F2EEAFE0267BCEF6009C2048 /* ContentView.swift */,
+				F2EEAFFB267BD055009C2048 /* View */,
+				F2EEB000267BD0A7009C2048 /* Model */,
+				F2EEAFFF267BD08C009C2048 /* Style */,
+				F2EEAFFE267BD086009C2048 /* Utility */,
+				F2EEAFFD267BD07F009C2048 /* Extension */,
+				F2EEAFFA267BD037009C2048 /* Sound */,
 				F2EEAFE2267BCF09009C2048 /* Assets.xcassets */,
-				F2EEAFE7267BCF09009C2048 /* Persistence.swift */,
 				F2EEAFEC267BCF09009C2048 /* Info.plist */,
-				F2EEAFE9267BCF09009C2048 /* Devote.xcdatamodeld */,
 				F2EEAFE4267BCF09009C2048 /* Preview Content */,
 			);
 			path = Devote;
@@ -73,6 +86,56 @@
 				F2EEAFE5267BCF09009C2048 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F2EEAFFA267BD037009C2048 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				F2EEAFF4267BD019009C2048 /* sound-ding.mp3 */,
+				F2EEAFF5267BD019009C2048 /* sound-rise.mp3 */,
+				F2EEAFF3267BD019009C2048 /* sound-tap.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		F2EEAFFB267BD055009C2048 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2EEAFE0267BCEF6009C2048 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2EEAFFD267BD07F009C2048 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F270C911267E5ADE003B73F8 /* HIdeKeyboardExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F2EEAFFE267BD086009C2048 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				F2EEB003267C2E43009C2048 /* Constants.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		F2EEAFFF267BD08C009C2048 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		F2EEB000267BD0A7009C2048 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2EEAFE7267BCF09009C2048 /* Persistence.swift */,
+				F2EEAFE9267BCF09009C2048 /* Devote.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +195,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2EEAFF8267BD019009C2048 /* sound-rise.mp3 in Resources */,
+				F2EEAFF7267BD019009C2048 /* sound-ding.mp3 in Resources */,
+				F2EEAFF6267BD019009C2048 /* sound-tap.mp3 in Resources */,
 				F2EEAFE6267BCF09009C2048 /* Preview Assets.xcassets in Resources */,
 				F2EEAFE3267BCF09009C2048 /* Assets.xcassets in Resources */,
 			);
@@ -144,9 +210,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2EEB004267C2E43009C2048 /* Constants.swift in Sources */,
 				F2EEAFE8267BCF09009C2048 /* Persistence.swift in Sources */,
 				F2EEAFE1267BCEF6009C2048 /* ContentView.swift in Sources */,
 				F2EEAFEB267BCF09009C2048 /* Devote.xcdatamodeld in Sources */,
+				F270C912267E5ADE003B73F8 /* HIdeKeyboardExtension.swift in Sources */,
 				F2EEAFDF267BCEF6009C2048 /* DevoteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
