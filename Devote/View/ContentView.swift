@@ -10,6 +10,8 @@ import CoreData
 
 struct ContentView: View {
     //MARK: - PROPERTY
+    //"isDarkMode" is a key in the SwiftUI's user defaults
+    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
     @State var task: String = ""
     @State private var showNewTaskItem: Bool = false
 
@@ -18,22 +20,22 @@ struct ContentView: View {
     /*
      Managed Object Context: An environment where we can manipulate Core Data objects entirely in RAM
      Add an @Environment object to read the managed object context right out
-     the viewContext is a "scrachpad" to retrieve, update and store objects.
+     the viewContext is a "scratchpad" to retrieve, update and store objects.
      
      */
     @Environment(\.managedObjectContext) private var viewContext
     
     /*
-     FetchRequest allow us to load core data results that match the specific critera we specify
-     swiftUI combines thse results directly to user interface elements
+     FetchRequest allow us to load core data results that match the specific criteria we specify
+     swiftUI combines these results directly to user interface elements
      
-     it could potentily have four parametsrs
+     it could potentially have four parameters
      entity: is what we want to query
      sort descriptor: determines in which order results are returned
      predicate: used to filter the data
      animation: used for any changes to the fetched results
      
-     xcode's default core data template uses only the sort descriptor and animation
+     Xcode's default core data template uses only the sort descriptor and animation
      */
     
     @FetchRequest(
@@ -49,6 +51,34 @@ struct ContentView: View {
                 //MARK: - Main View
                 VStack {
                     //MARK: - Header
+                    HStack(spacing: 10) {
+                        //Title
+                        Text("Devote")
+                            .font(.system(.largeTitle, design: .rounded))
+                            .fontWeight(.heavy)
+                            .padding(.leading, 4)
+                        Spacer()
+                        //Edit Button
+                        EditButton()
+                            .font(.system(size: 16, weight: .semibold, design: .rounded))
+                            .padding(.horizontal, 10)
+                            .frame(minWidth: 70, minHeight: 24)
+                            .background(
+                                Capsule().stroke(Color.white, lineWidth: 2)
+                            )
+                        //Appearance Button
+                        Button(action: {
+                            //Toggle Appearance
+                            isDarkMode.toggle()
+                        }, label: {
+                            Image(systemName: isDarkMode ? "moon.circle.fill" : "moon.circle")
+                                .resizable()
+                                .frame(width: 24, height: 24)
+                                .font(.system(.title, design: .rounded))
+                        })
+                    } //: HStack
+                    .padding()
+                    .foregroundColor(.white)
                     Spacer(minLength: 80)
                     //MARK: - New Task Button
                     Button(action: {
@@ -101,13 +131,7 @@ struct ContentView: View {
                 UITableView.appearance().backgroundColor = UIColor.clear
             }
             .navigationBarTitle("Daily Tasks", displayMode: .large)
-            .toolbar {
-                #if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                #endif
-            } //: Toolbar
+            .navigationBarHidden(true)
             .background(
                 BackgroundImageView()
             )
