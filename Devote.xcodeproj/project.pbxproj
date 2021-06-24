@@ -11,6 +11,8 @@
 		F270C915267E60C8003B73F8 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F270C914267E60C8003B73F8 /* BackgroundImageView.swift */; };
 		F270C918267E63A7003B73F8 /* NewTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F270C917267E63A7003B73F8 /* NewTaskItemView.swift */; };
 		F2D523BC267EB0C900B738C5 /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D523BB267EB0C900B738C5 /* BlankView.swift */; };
+		F2D523BF2684084100B738C5 /* ListRowItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D523BE2684084100B738C5 /* ListRowItemView.swift */; };
+		F2D523C226840BE400B738C5 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D523C126840BE400B738C5 /* CheckboxStyle.swift */; };
 		F2EEAFDF267BCEF6009C2048 /* DevoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EEAFDE267BCEF6009C2048 /* DevoteApp.swift */; };
 		F2EEAFE1267BCEF6009C2048 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EEAFE0267BCEF6009C2048 /* ContentView.swift */; };
 		F2EEAFE3267BCF09009C2048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2EEAFE2267BCF09009C2048 /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 		F270C914267E60C8003B73F8 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
 		F270C917267E63A7003B73F8 /* NewTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemView.swift; sourceTree = "<group>"; };
 		F2D523BB267EB0C900B738C5 /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
+		F2D523BE2684084100B738C5 /* ListRowItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowItemView.swift; sourceTree = "<group>"; };
+		F2D523C126840BE400B738C5 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
 		F2EEAFDB267BCEF6009C2048 /* Devote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Devote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2EEAFDE267BCEF6009C2048 /* DevoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevoteApp.swift; sourceTree = "<group>"; };
 		F2EEAFE0267BCEF6009C2048 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 				F270C914267E60C8003B73F8 /* BackgroundImageView.swift */,
 				F270C917267E63A7003B73F8 /* NewTaskItemView.swift */,
 				F2D523BB267EB0C900B738C5 /* BlankView.swift */,
+				F2D523BE2684084100B738C5 /* ListRowItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 		F2EEAFFF267BD08C009C2048 /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				F2D523C126840BE400B738C5 /* CheckboxStyle.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -225,8 +231,10 @@
 				F2EEAFE1267BCEF6009C2048 /* ContentView.swift in Sources */,
 				F2D523BC267EB0C900B738C5 /* BlankView.swift in Sources */,
 				F2EEAFEB267BCF09009C2048 /* Devote.xcdatamodeld in Sources */,
+				F2D523BF2684084100B738C5 /* ListRowItemView.swift in Sources */,
 				F270C912267E5ADE003B73F8 /* HIdeKeyboardExtension.swift in Sources */,
 				F2EEAFDF267BCEF6009C2048 /* DevoteApp.swift in Sources */,
+				F2D523C226840BE400B738C5 /* CheckboxStyle.swift in Sources */,
 				F270C918267E63A7003B73F8 /* NewTaskItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
